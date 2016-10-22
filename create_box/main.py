@@ -3,12 +3,12 @@
 
 def create_box(height, width, character):
     x = ""
-    if height and width >= 1:
-        i = width * character
-        j = 0
-        while j in range(height):
-            print(i)
-            j = j +1
-    return x        
+    if height and width > 0:
+        for i in range(0,height):
+            for j in range(0,width):
+                x+=character
+            else:
+                x+='\n'
+    return x      
 if __name__ == '__main__':
     create_box(3, 4, '*')
